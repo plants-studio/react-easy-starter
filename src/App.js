@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Home from "./Home";
 import NotFound from "./NotFound";
 import Chapter1 from "./chapter1/Chapter1";
-import NavBar from "./chapter1/NavBar";
 
 function App() {
   return (

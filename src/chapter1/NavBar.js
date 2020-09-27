@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [selected, setSelected] = useState("comment");
+  const [selected, setSelected] = useState("wrapped");
 
   return (
     <div>
@@ -13,56 +13,72 @@ const NavBar = () => {
             setSelected("wrapped");
           }}
         >
-          Wrapped Element
+          <Link className="link" to="/chapter1/wrapped">
+            Wrapped Element
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("expression");
           }}
         >
-          JS Expression
+          <Link className="link" to="/chapter1/expression">
+            JS Expression
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("ternary");
           }}
         >
-          Ternary Operator
+          <Link className="link" to="/chapter1/ternary">
+            Ternary Operator
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("and");
           }}
         >
-          And Operator
+          <Link className="link" to="/chapter1/and">
+            And Operator
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("style");
           }}
         >
-          Inline Style
+          <Link className="link" to="/chapter1/style">
+            Inline Style
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("class");
           }}
         >
-          ClassName
+          <Link className="link" to="/chapter1/class">
+            ClassName
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("tag");
           }}
         >
-          Close Tag
+          <Link className="link" to="/chapter1/tag">
+            Close Tag
+          </Link>
         </li>
         <li
           onMouseOver={() => {
             setSelected("comment");
           }}
         >
-          Comment
+          <Link className="link" to="/chapter1/comment">
+            Comment
+          </Link>
         </li>
         <li className={selected}></li>
       </ul>

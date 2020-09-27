@@ -27,6 +27,11 @@ li:last-child {
   transition: all 600ms ease;
 }
 
+.link {
+  color: black;
+  text-decoration: none;
+}
+
 .wrapped {
   left: 10px;
   width: 142px;
