@@ -1,0 +1,68 @@
+ul {
+  width: 1000px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+}
+
+li {
+  font-size: 18px;
+  padding: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+li:last-child {
+  padding: 0;
+  cursor: none;
+  position: absolute;
+  display: inline-block;
+  top: 50px;
+  height: 2px;
+  background: black;
+  transition: all 600ms ease;
+}
+
+.wrapped {
+  left: 10px;
+  width: 142px;
+}
+
+.expression {
+  left: 172px;
+  width: 105px;
+}
+
+.ternary {
+  left: 297px;
+  width: 135px;
+}
+
+.and {
+  left: 451px;
+  width: 110px;
+}
+
+.style {
+  left: 581px;
+  width: 87px;
+}
+
+.class {
+  left: 686px;
+  width: 89px;
+}
+
+.tag {
+  left: 794px;
+  width: 75px;
+}
+
+.comment {
+  left: 889px;
+  width: 80px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import WrappedElement from "./components/WrappedElement";
 import JSExpression from "./components/JSExpression";
 import TernaryOperator from "./components/TernaryOperator";
@@ -8,14 +8,16 @@ import InlineStyle from "./components/InlineStyle";
 import ClassName from "./components/ClassName";
 import CloseTag from "./components/CloseTag";
 import Comment from "./components/Comment";
+import NavBar from "./NavBar";
 import NotFound from "./../NotFound";
 
 function App() {
   return (
     <>
+      <NavBar />
       <h1>챕터 1</h1>
       <Switch>
-        <Route exact path="/chapter1/wrapper" component={WrappedElement} />
+        <Route exact path="/chapter1/wrapped" component={WrappedElement} />
         <Route exact path="/chapter1/expression" component={JSExpression} />
         <Route exact path="/chapter1/ternary" component={TernaryOperator} />
         <Route exact path="/chapter1/and" component={AndOperator} />
