@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Home from "./Home";
+import NotFound from "./NotFound";
+import Chapter1 from "./chapter1/Chapter1";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <header className="App-header">상단 헤더입니다</header>
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/chapter1" component={Chapter1} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
